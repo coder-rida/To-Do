@@ -1,0 +1,148 @@
+/* Body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #170464;
+}
+
+/* Page heading */
+h1 {
+  padding: 60px;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  font-family: popins;
+  font-weight: normal;
+  color: rgb(136, 140 ,232);
+}
+h1 .material-icons-outlined {
+  font-size: 45px;
+  vertical-align: middle; 
+}
+
+/* Task list container */
+.task-list {
+  padding: 0;
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  border: 2px solid #444;
+  border-radius: 8px;
+  background: #2a2a2a;
+}
+
+/* Individual task item */
+.task {
+  background: #2a2a2a;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  border: 2px solid #2a2a2a;
+}
+
+/* Left part of task: circle + text */
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between circle and text */
+}
+
+/* Circle for complete toggle */
+.circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+}
+
+.circle.completed {
+  background-color: darkblue;
+}
+
+/* Completed task text */
+.completed-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Editable span styling for edit */
+.task-left span {
+  color: white;
+  cursor: text;
+}
+
+.task-left span:focus {
+  outline: 2px solid white;       /* white border */
+  background-color: black;        /* black background */
+  padding: 2px 6px;               /* slightly bigger */
+  border-radius: 4px;
+  min-width: 100px;               /* ensure enough width */
+  display: inline-block;
+}
+
+/* Task action buttons: edit, delete, star */
+.task-actions button {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 3px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Add task input container */
+.add-task {
+  position: fixed;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid #444;
+}
+
+/* Input field in Add Task */
+.add-task input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: white; /* keep input text white */
+  font-size: 16px;
+}
+
+/* Add Task button */
+.add-task button {
+  background: none;
+  border: none;
+  color: #a28cff;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* Editing mode for task text */
+.task-left span.editing {
+  outline: 2px solid white;
+  background-color: black;
+  padding: 2px 4px;
+  border-radius: 4px;
+  min-width: 100px; /* keep enough width */
+  display: inline-block;
+}
