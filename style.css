@@ -33,8 +33,6 @@ h1 .material-icons-outlined {
   border-radius: 8px;
   background: #2a2a2a;
 }
-
-/* Individual task item */
 .task {
   background: #2a2a2a;
   margin-bottom: 5px;
@@ -46,15 +44,11 @@ h1 .material-icons-outlined {
   color: white;
   border: 2px solid #2a2a2a;
 }
-
-/* Left part of task: circle + text */
 .task-left {
   display: flex;
   align-items: center;
   gap: 15px; /* space between circle and text */
 }
-
-/* Circle for complete toggle */
 .circle {
   width: 15px;
   height: 15px;
@@ -85,11 +79,11 @@ h1 .material-icons-outlined {
 }
 
 .task-left span:focus {
-  outline: 2px solid white;       /* white border */
-  background-color: black;        /* black background */
-  padding: 2px 6px;               /* slightly bigger */
+  outline: 2px solid white;       
+  background-color: black;        
+  padding: 2px 6px;               
   border-radius: 4px;
-  min-width: 100px;               /* ensure enough width */
+  min-width: 100px;               
   display: inline-block;
 }
 
@@ -125,24 +119,98 @@ h1 .material-icons-outlined {
   background: none;
   border: none;
   outline: none;
-  color: white; /* keep input text white */
+  color: white; 
   font-size: 16px;
 }
 
-/* Add Task button */
+/* Default button style for + and Add */
 .add-task button {
-  background: none;
   border: none;
-  color: #a28cff;
-  font-size: 20px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
+
+/* + button */
+#addBtn {
+  background: none;
+  color: #a28cff;
+  font-size: 22px;
+  margin-right: 6px;
+}
+
+/* Add button */
+.mobile-btn {
+  background-color: #444;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.mobile-btn:hover {
+  background-color: #666;
+}
+
 /* Editing mode for task text */
 .task-left span.editing {
   outline: 2px solid white;
   background-color: black;
   padding: 2px 4px;
   border-radius: 4px;
-  min-width: 100px; /* keep enough width */
+  min-width: 100px; 
   display: inline-block;
+}
+
+/* ============================= */
+/* Mobile Responsive Adjustments */
+/* ============================= */
+@media (max-width: 768px) {
+  .task-list {
+    width: 100%;
+    border-width: 3px;
+  }
+
+  .task {
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+  }
+
+  .task-left span {
+    font-size: 18px;
+  }
+
+  .add-task {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  .add-task input {
+    font-size: 18px;
+  }
+
+  #addBtn {
+    font-size: 26px; /* Bigger + on mobile */
+  }
+
+  .mobile-btn {
+    font-size: 18px;
+    padding: 8px 16px; /* Bigger touch area */
+  }
+
+  h1 {
+    font-size: 28px;
+    padding: 30px;
+  }
+
+  h1 .material-icons-outlined {
+    font-size: 36px;
+  }
 }
